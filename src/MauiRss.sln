@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiRss", "MauiRss.csproj", "{50001EFA-8307-4E4C-80AB-51D443EA66FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiRss", "MauiRss\MauiRss.csproj", "{50001EFA-8307-4E4C-80AB-51D443EA66FF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiRss.Core", "MauiRss.Core\MauiRss.Core.csproj", "{7AD3600D-B83D-4FBE-A3BD-359B0AA1DDB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiRss.LiteDb", "MauiRss.LiteDb\MauiRss.LiteDb.csproj", "{300E18F6-38B2-4241-BADF-6F77AC652B2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiRss.Tests", "..\tests\MauiRss.Tests\MauiRss.Tests.csproj", "{58A4257A-4031-47A7-907D-4EF2F74E375A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiRss.GoogleNews", "MauiRss.GoogleNews\MauiRss.GoogleNews.csproj", "{B05F94B5-F6D1-44F9-A47B-02C75F912214}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiRss.FeedReader", "MauiRss.FeedReader\MauiRss.FeedReader.csproj", "{FAAB3F47-050E-4BF9-B458-D803423BC30E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +27,26 @@ Global
 		{50001EFA-8307-4E4C-80AB-51D443EA66FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50001EFA-8307-4E4C-80AB-51D443EA66FF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{50001EFA-8307-4E4C-80AB-51D443EA66FF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7AD3600D-B83D-4FBE-A3BD-359B0AA1DDB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AD3600D-B83D-4FBE-A3BD-359B0AA1DDB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AD3600D-B83D-4FBE-A3BD-359B0AA1DDB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AD3600D-B83D-4FBE-A3BD-359B0AA1DDB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{300E18F6-38B2-4241-BADF-6F77AC652B2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{300E18F6-38B2-4241-BADF-6F77AC652B2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{300E18F6-38B2-4241-BADF-6F77AC652B2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{300E18F6-38B2-4241-BADF-6F77AC652B2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58A4257A-4031-47A7-907D-4EF2F74E375A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58A4257A-4031-47A7-907D-4EF2F74E375A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58A4257A-4031-47A7-907D-4EF2F74E375A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58A4257A-4031-47A7-907D-4EF2F74E375A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B05F94B5-F6D1-44F9-A47B-02C75F912214}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B05F94B5-F6D1-44F9-A47B-02C75F912214}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B05F94B5-F6D1-44F9-A47B-02C75F912214}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B05F94B5-F6D1-44F9-A47B-02C75F912214}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAAB3F47-050E-4BF9-B458-D803423BC30E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAAB3F47-050E-4BF9-B458-D803423BC30E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAAB3F47-050E-4BF9-B458-D803423BC30E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAAB3F47-050E-4BF9-B458-D803423BC30E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
