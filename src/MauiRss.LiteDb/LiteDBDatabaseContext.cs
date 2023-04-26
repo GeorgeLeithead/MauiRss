@@ -11,7 +11,6 @@ public class LiteDBDatabaseContext : IDatabaseContext
 	private const string DatabaseName = "mauirss.db";
 	private const string FeedItemsCollection = "FeedItems";
 	private const string FeedsCollection = "Feeds";
-	private string? databasePath;
 	private LiteDatabase? db;
 
 	/// <summary>Initializes a new instance of the <see cref="LiteDBDatabaseContext"/> class.</summary>
@@ -85,7 +84,7 @@ public class LiteDBDatabaseContext : IDatabaseContext
 			_ = Directory.CreateDirectory(databasePath);
 		}
 
-		this.databasePath = Path.Combine(databasePath, DatabaseName);
-		db = new LiteDatabase(this.databasePath);
+		var dbPath = Path.Combine(databasePath, DatabaseName);
+		db = new LiteDatabase(dbPath);
 	}
 }
