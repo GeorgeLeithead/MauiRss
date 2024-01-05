@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiRss.Pages.SettingsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+    xmlns:datamodels="clr-namespace:MauiRss.Models"
+    xmlns:res="clr-namespace:MauiRss.Resources.Strings"
+    xmlns:viewmodels="clr-namespace:MauiRss.ViewModels"
+    Title="{x:Static res:AppResource.Settings}"
+    x:DataType="viewmodels:SettingsViewModel">
+    <Grid>
+        <ActivityIndicator
+            x:Name="ActivityIndicator"
+            Grid.Row="0"
+            Grid.Column="0"
+            AutomationId="ActivityIndicator"
+            HorizontalOptions="CenterAndExpand"
+            IsRunning="{Binding IsBusy}"
+            IsVisible="{Binding IsBusy}"
+            VerticalOptions="CenterAndExpand" />
+        <Grid
+            Grid.Row="0"
+            Grid.Column="0"
+            Padding="16"
+            Background="{AppThemeBinding Light={StaticResource Gray100},
+                                         Dark={StaticResource Gray900}}"
+            ColumnDefinitions="2*,8*"
+            IsVisible="{Binding IsNotBusy}"
+            RowDefinitions="*,*,*">
+            <Switch
+                Grid.Row="0"
+                Margin="0,24,0,0"
+                HorizontalOptions="Center"
+                IsToggled="{Binding IsDarkModeEnabled}"
+                SemanticProperties.Description="{x:Static res:AppResource.Semantic_Description_Toggle_Mode}" />
+            <Label
+                Grid.Row="0"
+                Grid.Column="1"
+                Margin="0,24,0,0"
+                SemanticProperties.Description="{x:Static res:AppResource.Dark_Mode}"
+                Style="{StaticResource BodySLabelStyle}"
+                Text="{x:Static res:AppResource.Dark_Mode}"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                Margin="0,48,0,0"
+                SemanticProperties.Description="{x:Static res:AppResource.Settings_Info}"
+                Style="{StaticResource BodySLabelStyle}"
+                Text="{x:Static res:AppResource.Settings_Info}"
+                TextColor="{AppThemeBinding Light={StaticResource Gray900},
+                                            Dark={StaticResource Gray100}}"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Row="2"
+                Grid.ColumnSpan="2"
+                Margin="0,11,0,0"
+                SemanticProperties.Description="{x:Static res:AppResource.Version}"
+                Style="{StaticResource BodySLabelStyle}"
+                VerticalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="{x:Static res:AppResource.Version}" />
+                        <Span Text=" - " />
+                        <Span Text="{Binding AppVersion}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </Grid>
+    </Grid>
+</ContentPage>

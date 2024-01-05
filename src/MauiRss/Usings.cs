@@ -1,0 +1,10 @@
+global using CommunityToolkit.Maui;
+global using CommunityToolkit.Mvvm.ComponentModel;
+global using CommunityToolkit.Mvvm.Messaging;
+global using MauiRss.Core.ViewModels;
+global using MauiRss.Models;
+global using MauiRss.Pages;
+global using MauiRss.Resources.Strings;
+global using MauiRss.ViewModels;
+global using Microsoft.Extensions.Logging;
+global using MauiRss.Helpers;
